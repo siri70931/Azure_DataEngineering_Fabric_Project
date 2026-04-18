@@ -1,0 +1,186 @@
+table gold_customer_full_data
+	lineageTag: 9c053566-6d22-4f7d-9026-3933543e17c6
+	sourceLineageTag: [dbo].[gold_customer_full_data]
+
+	column customer_id
+		dataType: string
+		lineageTag: c1ffcde6-1220-429f-a89d-6eeb722a2492
+		sourceLineageTag: customer_id
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: a5b0bc2a-0ff2-4687-a882-cc5c60256216
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 1208b67b-094b-4b3c-8179-c1e3bdf9291b
+		sourceLineageTag: email
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender
+		dataType: string
+		lineageTag: 045c7f7a-985e-470d-8b93-e2e8824925e2
+		sourceLineageTag: gender
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column dob
+		dataType: string
+		lineageTag: 9856c5bb-1d35-412e-94c1-80cb4e87a609
+		sourceLineageTag: dob
+		summarizeBy: none
+		sourceColumn: dob
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: c0edff5f-2f2b-43d8-a9dd-871bade4d4a2
+		sourceLineageTag: location
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_id
+		dataType: string
+		lineageTag: 62a674a4-303c-4b8b-bb0a-b2aa78ef8e72
+		sourceLineageTag: order_id
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fbf8bcca-3a17-4154-b507-6629463f0ffc
+		sourceLineageTag: order_date
+		summarizeBy: none
+		sourceColumn: order_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column amount
+		dataType: double
+		lineageTag: 3ddaa52b-71d2-44f4-b0c9-cec8631a60ac
+		sourceLineageTag: amount
+		summarizeBy: sum
+		sourceColumn: amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column status
+		dataType: string
+		lineageTag: 3f71ac63-98c8-4671-93e8-25549edc2f72
+		sourceLineageTag: status
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_method
+		dataType: string
+		lineageTag: 10b14ad4-eeff-4f39-b421-f4d158dc1e00
+		sourceLineageTag: payment_method
+		summarizeBy: none
+		sourceColumn: payment_method
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_status
+		dataType: string
+		lineageTag: f0601046-5058-45d7-bbd7-1945bc0bd21d
+		sourceLineageTag: payment_status
+		summarizeBy: none
+		sourceColumn: payment_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column ticket_id
+		dataType: string
+		lineageTag: 7f78ae23-a39d-43da-9ee8-ae6fa17aed97
+		sourceLineageTag: ticket_id
+		summarizeBy: none
+		sourceColumn: ticket_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column issue_type
+		dataType: string
+		lineageTag: f31d4830-6ba4-46ec-bd0f-cbb80726124d
+		sourceLineageTag: issue_type
+		summarizeBy: none
+		sourceColumn: issue_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ticket_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b746b955-c1eb-4df8-894c-e61b52c01c9b
+		sourceLineageTag: ticket_date
+		summarizeBy: none
+		sourceColumn: ticket_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolution_status
+		dataType: string
+		lineageTag: ef314f57-5140-4f66-9a4c-2f967ed8f5e4
+		sourceLineageTag: resolution_status
+		summarizeBy: none
+		sourceColumn: resolution_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_viewed
+		dataType: string
+		lineageTag: 8df410bc-cb80-47b3-882f-551cbaf1851b
+		sourceLineageTag: page_viewed
+		summarizeBy: none
+		sourceColumn: page_viewed
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_type
+		dataType: string
+		lineageTag: ceaf1b50-fc61-42d3-92b5-d0169629a528
+		sourceLineageTag: device_type
+		summarizeBy: none
+		sourceColumn: device_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4b4e84e2-b72d-434c-b292-221d18227085
+		sourceLineageTag: session_time
+		summarizeBy: none
+		sourceColumn: session_time
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_customer_full_data = entity
+		mode: directLake
+		source
+			entityName: gold_customer_full_data
+			expressionSource: 'DirectLake - Ecommerce_Lakehouse'
+
